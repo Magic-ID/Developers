@@ -1,2 +1,3 @@
-# Developers
-Magic Agent Developer Resources
+Web Agents
+==========
+This repo holds the developer resources site and example apps.
