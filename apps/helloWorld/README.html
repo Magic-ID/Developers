@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Readme</title>
+  </head>
+  <body>
+<h1 id="hello-world">Hello World</h1>
+<figure>
+<img src="./helloWorld.png" title="Hello World" alt="Hello" />
+<figcaption aria-hidden="true">Hello</figcaption>
+</figure>
+<p>This little example app gets a message and last-seen time from the
+Web Dæmon it is loaded into.</p>
+<h2 id="usage">Usage</h2>
+<ol type="1">
+<li>Install the app in your Dæmon launcher.</li>
+<li>When loaded, it echoes your Dæmon name and a “last seen” time.</li>
+</ol>
+<p>This shows:</p>
+<ol type="1">
+<li>How to define a Dæmon app including icon.</li>
+<li>How the web page frontend and Dæmon backend work together.</li>
+<li>How to use simple Dæmon storage and lifecycle.</li>
+</ol>
+<h2 id="how-it-works">How It Works</h2>
+<p>The <a href="./helloWorld.html">helloWorld.html</a> file defines
+<em>both</em> the front-end and back-end for the app. Normally of
+course, an HTML file defines a front-end alone.</p>
+<p>To do this, the HTML markup has just one extra thing:</p>
+<div class="sourceCode" id="cb1"><pre
+class="sourceCode html"><code class="sourceCode html"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;</span><span class="kw">link</span><span class="ot"> rel</span><span class="op">=</span><span class="st">&#39;webdaemon&#39;</span><span class="ot"> href</span><span class="op">=</span><span class="st">&#39;helloWorld.yml&#39;</span><span class="dt">&gt;</span></span></code></pre></div>
+<p>This element is used by the Dæmon just once - when the app is
+installed. It locates the YAML file that defines the back-end.</p>
+<h2 id="files">Files</h2>
+<p>The source files in this example are fully annotated, read them
+carefully to see how it fits together:</p>
+<ul>
+<li><a href="./helloWorld.html"><code>helloWorld.html</code></a>
+<ul>
+<li>This is the app source file, everything hangs off it.</li>
+</ul></li>
+<li><a href="./helloWorld.css"><code>helloWorld.css</code></a>
+<ul>
+<li>Simple stylesheet for the frontend.</li>
+</ul></li>
+<li><a href="./helloWorld.yml"><code>helloWorld.yml</code></a>
+<ul>
+<li>YAML file ties the frontend to the backend including authorization
+and static configuration.</li>
+</ul></li>
+<li><a href="./helloWorld.js"><code>helloWorld.js</code></a>
+<ul>
+<li>Browser-side Javascript makes the request on the backend and
+displays the result.</li>
+</ul></li>
+<li><a href="./helloWorld.ts"><code>helloWorld.ts</code></a>
+<ul>
+<li>Dæmon-side Typescript handles the request and serves the
+response.</li>
+</ul></li>
+</ul>
+  </body>
+</html>
